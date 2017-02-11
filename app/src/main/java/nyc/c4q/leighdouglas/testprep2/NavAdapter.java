@@ -24,7 +24,7 @@ public class NavAdapter extends RecyclerView.Adapter<NavViewHolder> {
 
     @Override
     public void onBindViewHolder(NavViewHolder holder, int position) {
-        holder.bind();
+        holder.bind(position);
     }
 
     @Override

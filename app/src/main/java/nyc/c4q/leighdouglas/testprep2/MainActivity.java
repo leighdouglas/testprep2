@@ -15,13 +15,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_with_nav_drawer);
-        initButtons();
-    }
-
-    private void initButtons(){
+        if (savedInstanceState == null){
+            getFragmentManager().beginTransaction().replace(R.id.activity_main, new ButtonFragment()).commit();
+        }
         rv = (RecyclerView) findViewById(R.id.rv);
         rv.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         rv.setAdapter(new NavAdapter());
+    }
+
+    private void initButtons(){
 
         login = (Button) findViewById(R.id.login);
         logout = (Button) findViewById(R.id.logout);
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 getFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.activity_main, new MainFragment())
+                        .replace(R.id.activity_main, new BoxFragment())
                         .commit();
                 login.setVisibility(View.GONE);
                 logout.setVisibility(View.GONE);
