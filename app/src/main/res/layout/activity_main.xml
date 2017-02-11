@@ -6,21 +6,4 @@
     android:layout_height="match_parent"
     tools:context="nyc.c4q.leighdouglas.testprep2.MainActivity">
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="@dimen/login_logout_button_width"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/login_button_top_margin"
-        android:text="@string/login" />
-
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="@dimen/login_logout_button_width"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/logout_button_bottom_margin"
-        android:text="@string/log_out" />
-
 </RelativeLayout>

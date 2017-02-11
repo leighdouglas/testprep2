@@ -17,7 +17,7 @@ public class NavViewHolder extends RecyclerView.ViewHolder {
         textView = (TextView) itemView.findViewById(R.id.rv_text);
     }
 
-    public void bind() {
-        textView.setText("hello");
+    public void bind(int position) {
+        textView.setText(String.valueOf(position));
     }
 }
