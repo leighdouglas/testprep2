@@ -29,6 +29,6 @@ public class NavAdapter extends RecyclerView.Adapter<NavViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 130;
+        return Integer.MAX_VALUE;
     }
 }
